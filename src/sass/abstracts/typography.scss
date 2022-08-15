@@ -1,6 +1,6 @@
 :root {
   --ff-body: "Heebo", sans-serif;
-  --heading: "Oswaltd", sans-serif;
+  --heading: "Oswald", sans-serif;
 
   // Font sizes
   --fs-xl: 5rem;
@@ -12,11 +12,20 @@
   --ff-primary: "Barlow", Sans-serif;
 }
 
-@media (min-width: 40em) {
-  :root {
-    --fs-xl: 7rem;
-    --fs-600: 2rem;
-    --fs-500: 1.25rem;
-    --fs-400: 1.125rem;
-  }
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+li {
+  font-family: var(--ff-primary);
+  line-height: 1.2;
+}
+
+a {
+  text-decoration: none;
+  color: var(--ff-body);
 }

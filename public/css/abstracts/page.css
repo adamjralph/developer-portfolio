@@ -14,11 +14,6 @@ blockquote {
   padding: 0;
 }
 
-body {
-  font-family: var(--ff-body);
-  line-height: 1.2;
-}
-
 blockquote {
   font-size: var(--fs-600);
   line-height: 1.2;
@@ -36,4 +31,18 @@ blockquote::after {
 
 h2 {
   font-size: var(--fs-600);
+}
+
+.container {
+  max-width: 1220px;
+  margin-inline: auto;
+}
+
+@media (min-width: 40em) {
+  :root {
+    --fs-xl: 7rem;
+    --fs-600: 2rem;
+    --fs-500: 1.25rem;
+    --fs-400: 1.125rem;
+  }
 }

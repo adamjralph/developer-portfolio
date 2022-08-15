@@ -1,6 +1,6 @@
 :root {
   --ff-body: "Heebo", sans-serif;
-  --heading: "Oswaltd", sans-serif;
+  --heading: "Oswald", sans-serif;
   --fs-xl: 5rem;
   --fs-600: 1.5rem;
   --fs-500: 1.25rem;
@@ -8,14 +8,24 @@
   --ff-primary: "Barlow", Sans-serif;
 }
 
-@media (min-width: 40em) {
-  :root {
-    --fs-xl: 7rem;
-    --fs-600: 2rem;
-    --fs-500: 1.25rem;
-    --fs-400: 1.125rem;
-  }
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+li {
+  font-family: var(--ff-primary);
+  line-height: 1.2;
 }
+
+a {
+  text-decoration: none;
+  color: var(--ff-body);
+}
+
 *,
 *::before,
 *::after {
@@ -30,11 +40,6 @@ p,
 blockquote {
   margin: 0;
   padding: 0;
-}
-
-body {
-  font-family: var(--ff-body);
-  line-height: 1.2;
 }
 
 blockquote {
@@ -56,6 +61,19 @@ h2 {
   font-size: var(--fs-600);
 }
 
+.container {
+  max-width: 1220px;
+  margin-inline: auto;
+}
+
+@media (min-width: 40em) {
+  :root {
+    --fs-xl: 7rem;
+    --fs-600: 2rem;
+    --fs-500: 1.25rem;
+    --fs-400: 1.125rem;
+  }
+}
 :root {
   --cl-primary-500: #1b4bf7;
   --cl-neutral-900: rgb(27, 27, 27);
