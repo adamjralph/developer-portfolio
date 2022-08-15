@@ -1,13 +1,11 @@
 :root {
   --ff-body: "Heebo", sans-serif;
   --heading: "Oswaltd", sans-serif;
-  --clr-primary-500: hsl(60 100% 50%);
-  --clr-neutral-900: hsl(0 0% 0%);
-  --clr-neutral-100: hsl(0 0% 100%);
   --fs-xl: 5rem;
   --fs-600: 1.5rem;
   --fs-500: 1.25rem;
   --fs-400: 1rem;
+  --ff-primary: "Barlow", Sans-serif;
 }
 
 @media (min-width: 40em) {
@@ -18,10 +16,6 @@
     --fs-400: 1.125rem;
   }
 }
-h1 {
-  color: var(--clr-neutral-100);
-}
-
 *,
 *::before,
 *::after {
@@ -60,4 +54,12 @@ blockquote::after {
 
 h2 {
   font-size: var(--fs-600);
+}
+
+:root {
+  --cl-primary-500: #1b4bf7;
+  --cl-neutral-900: rgb(27, 27, 27);
+  --cl-neutral-100: hsl(0 0% 100%);
+  --cl-twitter: #1d9bf0;
+  --cl-youtube: #ff0000;
 }
