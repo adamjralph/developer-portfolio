@@ -9,8 +9,12 @@
 .header__social__icon--youtube:hover, .header__social__icon--youtuve:focus {
   color: var(--cl-youtube);
 }
+.header__social__icon--github {
+  border-radius: 50%;
+}
 .header__social__icon--github:hover, .header__social__icon--github:focus {
-  color: var(--cl-github);
+  color: var(--cl-neutral-100);
+  background-color: #000;
 }
 
 @media (min-width: 600px) {

@@ -1,4 +1,9 @@
 // Header navigation
+
+// Rounded background for gihub icon hover/focus
+.header__social__icon--github {
+}
+
 .header__social__icon {
   color: #000;
   width: 1rem;
@@ -12,9 +17,14 @@
   &--youtuve:focus {
     color: var(--cl-youtube);
   }
+
+  &--github {
+    border-radius: 50%;
+  }
   &--github:hover,
   &--github:focus {
-    color: var(--cl-github);
+    color: var(--cl-neutral-100);
+    background-color: #000;
   }
 }
 
