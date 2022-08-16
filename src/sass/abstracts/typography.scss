@@ -8,8 +8,20 @@
   --fs-500: 1.25rem;
   --fs-400: 1rem;
 
+  // Padding
+  --pd-xl: 5rem;
+  --pd-600: 1.5rem;
+  --pd-500: 1.25rem;
+  --pd-400: 1rem;
+
+  // Margin
+  --mg-xl: 5rem;
+  --mg-600: 1.5rem;
+  --mg-500: 1.25rem;
+  --mg-400: 1rem;
+
   // Fonts
-  --ff-primary: "Barlow", Sans-serif;
+  --ff-primary: "Barlow", sans-serif;
 }
 
 body,
@@ -19,6 +31,7 @@ h3,
 h4,
 h5,
 h6,
+p,
 a,
 li {
   font-family: var(--ff-primary);
@@ -27,5 +40,5 @@ li {
 
 a {
   text-decoration: none;
-  color: var(--ff-body);
+  color: var(--cl-neutral-black);
 }

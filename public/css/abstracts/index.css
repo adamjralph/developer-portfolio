@@ -5,7 +5,15 @@
   --fs-600: 1.5rem;
   --fs-500: 1.25rem;
   --fs-400: 1rem;
-  --ff-primary: "Barlow", Sans-serif;
+  --pd-xl: 5rem;
+  --pd-600: 1.5rem;
+  --pd-500: 1.25rem;
+  --pd-400: 1rem;
+  --mg-xl: 5rem;
+  --mg-600: 1.5rem;
+  --mg-500: 1.25rem;
+  --mg-400: 1rem;
+  --ff-primary: "Barlow", sans-serif;
 }
 
 body,
@@ -15,6 +23,7 @@ h3,
 h4,
 h5,
 h6,
+p,
 a,
 li {
   font-family: var(--ff-primary);
@@ -23,7 +32,7 @@ li {
 
 a {
   text-decoration: none;
-  color: var(--ff-body);
+  color: var(--cl-neutral-black);
 }
 
 *,
@@ -57,10 +66,6 @@ blockquote::after {
   content: close-quote;
 }
 
-h2 {
-  font-size: var(--fs-600);
-}
-
 .container {
   max-width: 1220px;
   margin-inline: auto;
@@ -75,9 +80,30 @@ h2 {
   }
 }
 :root {
-  --cl-primary-500: #1b4bf7;
-  --cl-neutral-900: rgb(27, 27, 27);
-  --cl-neutral-100: hsl(0 0% 100%);
+  --fs-xl: 5rem;
+  --fs-600: 1.5rem;
+  --fs-500: 1.25rem;
+  --fs-400: 1rem;
+  --fs-300: 0.5rem;
+  --fs-200: 0.25rem;
+  --pd-xl: 5rem;
+  --pd-600: 1.5rem;
+  --pd-500: 1.25rem;
+  --pd-400: 1rem;
+  --pd-300: 0.5rem;
+  --pd-200: 0.25rem;
+  --mg-xl: 5rem;
+  --mg-600: 1.5rem;
+  --mg-500: 1.25rem;
+  --mg-400: 1rem;
+  --mg-300: 0.5rem;
+  --mg-200: 0.25rem;
+}
+
+:root {
+  --cl-primary-blue: #1b4bf7;
+  --cl-neutral-black: rgb(27, 27, 27);
+  --cl-neutral-white: hsl(0 0% 100%);
   --cl-twitter: #1d9bf0;
   --cl-youtube: #ff0000;
   --cl-github: #727272;

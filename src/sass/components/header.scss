@@ -1,14 +1,45 @@
 // Header navigation
-
-// Rounded background for gihub icon hover/focus
-.header__social__icon--github {
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+  margin-block-start: var(--mg-500);
 }
+
+.header__social {
+  margin-block-start: var(--mg-300);
+}
+
+.header__social__link {
+  padding-inline: var(--pd-200);
+}
+
+// Navigation
+.header__nav {
+  margin-block-start: var(--mg-300);
+}
+
+.header__nav__link {
+  margin-inline: var(--mg-200);
+}
+
+.header__nav__btn {
+  display: block;
+}
+
+// Social icons hover/focus state
 
 .header__social__icon {
   color: #000;
   width: 1rem;
   height: 1rem;
-
+  &--twitter,
+  &--youtube,
+  &--github {
+    transition: all 0.3s ease-in-out;
+  }
   &--twitter:hover,
   &--twitter:focus {
     color: var(--cl-twitter);
@@ -23,14 +54,16 @@
   }
   &--github:hover,
   &--github:focus {
-    color: var(--cl-neutral-100);
+    color: var(--cl-neutral-white);
     background-color: #000;
   }
 }
 
+// Media mobile
 @media (min-width: 600px) {
   .header {
     display: flex;
+    flex-direction: row;
     margin-inline: auto;
     justify-content: space-between;
     align-items: center;
