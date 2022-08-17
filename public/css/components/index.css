@@ -6,9 +6,30 @@
   padding-inline: 1.5rem;
   margin-block-start: var(--mg-500);
 }
+@media (min-width: 600px) {
+  .header {
+    display: flex;
+    flex-direction: row;
+    margin-inline: auto;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+@media (min-width: 600px) {
+  .header__logo {
+    flex-grow: 0;
+  }
+}
 
 .header__social {
   margin-block-start: var(--mg-300);
+}
+@media (min-width: 600px) {
+  .header__social {
+    flex-grow: 2;
+    margin-inline-start: 3rem;
+  }
 }
 
 .header__social__link {
@@ -21,6 +42,11 @@
 
 .header__nav__link {
   margin-inline: var(--mg-200);
+}
+@media (min-width: 600px) {
+  .header__nav__link {
+    margin-inline-end: var(--mg-600);
+  }
 }
 
 .header__nav__btn {
@@ -47,21 +73,4 @@
 .header__social__icon--github:hover, .header__social__icon--github:focus {
   color: var(--cl-neutral-white);
   background-color: #000;
-}
-
-@media (min-width: 600px) {
-  .header {
-    display: flex;
-    flex-direction: row;
-    margin-inline: auto;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .header__logo {
-    flex-grow: 0;
-  }
-  .header__social {
-    flex-grow: 2;
-    margin-inline-start: 3rem;
-  }
 }
