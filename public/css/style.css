@@ -178,3 +178,8 @@ blockquote::after {
   color: var(--cl-neutral-white);
   background-color: #000;
 }
+
+.hero__image {
+  display: block;
+  max-width: 100%;
+}
