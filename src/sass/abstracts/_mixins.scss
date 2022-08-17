@@ -1,11 +1,11 @@
 // Media queries
-@mixin for-tablet {
-  @media (min-width: 600px) {
+@mixin for-tablet($breakpoint) {
+  @media (min-width: $breakpoint) {
     @content;
   }
 }
-@mixin for-desktop {
-  @media (min-width: 900px) {
+@mixin for-desktop($breakpoint) {
+  @media (min-width: $breakpoint) {
     @content;
   }
 }

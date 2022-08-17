@@ -106,7 +106,7 @@ blockquote::after {
   padding-inline: 1.5rem;
   margin-block-start: var(--mg-500);
 }
-@media (min-width: 600px) {
+@media (min-width: 640px) {
   .header {
     display: flex;
     flex-direction: row;
@@ -116,16 +116,20 @@ blockquote::after {
   }
 }
 
-@media (min-width: 600px) {
+@media (min-width: 640px) {
   .header__logo {
     flex-grow: 0;
   }
 }
 
+.header__logo__heading {
+  font-weight: 400;
+}
+
 .header__social {
   margin-block-start: var(--mg-300);
 }
-@media (min-width: 600px) {
+@media (min-width: 640px) {
   .header__social {
     flex-grow: 2;
     margin-inline-start: 3rem;
@@ -143,7 +147,7 @@ blockquote::after {
 .header__nav__link {
   margin-inline: var(--mg-200);
 }
-@media (min-width: 600px) {
+@media (min-width: 640px) {
   .header__nav__link {
     margin-inline-end: var(--mg-600);
   }

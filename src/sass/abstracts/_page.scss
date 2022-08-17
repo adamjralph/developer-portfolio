@@ -46,6 +46,10 @@ blockquote::after {
   }
 }
 
+// Breakpoints
+$tablet: 640px;
+$desktop: 900px;
+
 :root {
   // Font sizes
   --fs-xl: 5rem;

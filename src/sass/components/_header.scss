@@ -1,4 +1,7 @@
-@use "../abstracts/mixins" as media; // Header navigation
+@use "../abstracts/mixins" as media;
+@use "../abstracts/page" as width;
+
+// Header navigation
 .header {
   display: flex;
   flex-direction: column;
@@ -7,7 +10,7 @@
   padding-inline: 1.5rem;
   margin-block-start: var(--mg-500);
 
-  @include media.for-tablet {
+  @include media.for-tablet(width.$tablet) {
     display: flex;
     flex-direction: row;
     margin-inline: auto;
@@ -17,14 +20,18 @@
 }
 
 .header__logo {
-  @include media.for-tablet {
+  @include media.for-tablet(width.$tablet) {
     flex-grow: 0;
   }
 }
 
+.header__logo__heading {
+  font-weight: 400;
+}
+
 .header__social {
   margin-block-start: var(--mg-300);
-  @include media.for-tablet {
+  @include media.for-tablet(width.$tablet) {
     flex-grow: 2;
     margin-inline-start: 3rem;
   }
@@ -41,7 +48,7 @@
 
 .header__nav__link {
   margin-inline: var(--mg-200);
-  @include media.for-tablet {
+  @include media.for-tablet(width.$tablet) {
     margin-inline-end: var(--mg-600);
   }
 }
