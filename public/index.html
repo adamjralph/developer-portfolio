@@ -20,18 +20,28 @@
   <body>
     <div class="container">
       <header id="header" class="header">
+        <!-- Logo -->
         <div class="header__logo">
           <h1 class="header__logo__heading">adam</h1>
         </div>
-        <div class="nav-image-container">
-          <nav class="header__nav">
-            <a href="#about" class="header__nav__link">about</a>
-            <a href="#projects" class="header__nav__link">projects</a>
-            <button class="btn nav__btn">
-              <a href="#contact" class="header__nav__link">Lets Talk</a>
-            </button>
-          </nav>
-        </div>
+
+        <!-- Navigation -->
+        <nav class="header__nav">
+          <a href="#about" class="header__nav__link">about</a>
+          <a href="#projects" class="header__nav__link">projects</a>
+          <button class="btn nav__btn">
+            <a href="#contact" class="header__nav__link">Lets Talk</a>
+          </button>
+        </nav>
+
+        <!-- Header image -->
+        <img
+          class="header__image"
+          src="./assets/img/melbourne-1.jpg"
+          alt="melbourne"
+        />
+
+        <!-- Social links -->
         <div class="social-image-container">
           <div class="header__social">
             <!-- Twitter -->
@@ -56,11 +66,6 @@
               <i class="fa-brands fa-github header__social__icon--github"></i>
             </a>
           </div>
-          <img
-            class="hero__image"
-            src="./assets/img/melbourne-1.jpg"
-            alt="melbourne"
-          />
         </div>
       </header>
     </div>

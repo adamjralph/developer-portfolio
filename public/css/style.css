@@ -105,8 +105,7 @@ blockquote::after {
 }
 
 .header {
-  display: flex;
-  flex-direction: column;
+  display: grid;
   align-items: center;
   margin-inline: auto;
   padding-inline: 1.5rem;
@@ -114,8 +113,8 @@ blockquote::after {
 }
 @media (min-width: 640px) {
   .header {
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
     margin-inline: auto;
     justify-content: space-between;
     align-items: center;
@@ -144,6 +143,12 @@ blockquote::after {
 
 .header__social__link {
   padding-inline: var(--pd-200);
+}
+
+.header__image {
+  display: block;
+  max-width: 95%;
+  margin-inline: auto;
 }
 
 .social-image-container {
@@ -199,9 +204,4 @@ blockquote::after {
 .header__social__icon--github:hover, .header__social__icon--github:focus {
   color: var(--cl-neutral-white);
   background-color: #000;
-}
-
-.hero__image {
-  display: block;
-  max-width: 100%;
 }
