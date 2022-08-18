@@ -1,5 +1,5 @@
 @use "../abstracts/mixins" as media;
-@use "../abstracts/page" as width;
+@use "../abstracts/variables" as width;
 
 // Header navigation
 .header {
@@ -33,7 +33,7 @@
   margin-block-start: var(--mg-300);
   @include media.for-tablet(width.$tablet) {
     flex-grow: 2;
-    margin-inline-start: 3rem;
+    margin-inline-start: var(--mg-800);
   }
 }
 
@@ -42,8 +42,22 @@
 }
 
 // Navigation
+
+// Nav image switch for mobile/tablet
+.social-image-container {
+  display: flex;
+  flex-direction: column-reverse;
+  @include media.for-tablet(width.$tablet) {
+    display: block;
+  }
+}
+
 .header__nav {
+  display: none;
   margin-block-start: var(--mg-300);
+  @include media.for-tablet(width.$tablet) {
+    display: block;
+  }
 }
 
 .header__nav__link {

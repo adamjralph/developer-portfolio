@@ -69,6 +69,15 @@ blockquote::after {
   }
 }
 :root {
+  --cl-primary-blue: #1b4bf7;
+  --cl-neutral-black: rgb(27, 27, 27);
+  --cl-neutral-white: hsl(0 0% 100%);
+  --cl-twitter: #1d9bf0;
+  --cl-youtube: #ff0000;
+  --cl-github: #727272;
+}
+
+:root {
   --fs-xl: 5rem;
   --fs-600: 1.5rem;
   --fs-500: 1.25rem;
@@ -76,26 +85,23 @@ blockquote::after {
   --fs-300: 0.5rem;
   --fs-200: 0.25rem;
   --pd-xl: 5rem;
+  --pd-900: 4rem;
+  --pd-800: 3rem;
+  --pd-700: 2rem;
   --pd-600: 1.5rem;
   --pd-500: 1.25rem;
   --pd-400: 1rem;
   --pd-300: 0.5rem;
   --pd-200: 0.25rem;
   --mg-xl: 5rem;
+  --mg-900: 4rem;
+  --mg-800: 3rem;
+  --mg-700: 2rem;
   --mg-600: 1.5rem;
   --mg-500: 1.25rem;
   --mg-400: 1rem;
   --mg-300: 0.5rem;
   --mg-200: 0.25rem;
-}
-
-:root {
-  --cl-primary-blue: #1b4bf7;
-  --cl-neutral-black: rgb(27, 27, 27);
-  --cl-neutral-white: hsl(0 0% 100%);
-  --cl-twitter: #1d9bf0;
-  --cl-youtube: #ff0000;
-  --cl-github: #727272;
 }
 
 .header {
@@ -132,7 +138,7 @@ blockquote::after {
 @media (min-width: 640px) {
   .header__social {
     flex-grow: 2;
-    margin-inline-start: 3rem;
+    margin-inline-start: var(--mg-800);
   }
 }
 
@@ -140,8 +146,24 @@ blockquote::after {
   padding-inline: var(--pd-200);
 }
 
+.social-image-container {
+  display: flex;
+  flex-direction: column-reverse;
+}
+@media (min-width: 640px) {
+  .social-image-container {
+    display: block;
+  }
+}
+
 .header__nav {
+  display: none;
   margin-block-start: var(--mg-300);
+}
+@media (min-width: 640px) {
+  .header__nav {
+    display: block;
+  }
 }
 
 .header__nav__link {
