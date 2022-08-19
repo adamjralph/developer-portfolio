@@ -32,13 +32,18 @@ blockquote::after {
   content: close-quote;
 }
 
+button {
+  border: none;
+}
+
 // Page container
 .container {
   width: 100%;
   @include media.for-tablet(width.$tablet) {
+    position: relative;
     width: 80%;
     max-width: 1220px;
-    margin-inline: auto;
+    margin: auto;
   }
 }
 

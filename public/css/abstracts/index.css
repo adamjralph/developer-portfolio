@@ -81,14 +81,19 @@ blockquote::after {
   content: close-quote;
 }
 
+button {
+  border: none;
+}
+
 .container {
   width: 100%;
 }
 @media (min-width: 640px) {
   .container {
+    position: relative;
     width: 80%;
     max-width: 1220px;
-    margin-inline: auto;
+    margin: auto;
   }
 }
 

@@ -55,20 +55,15 @@
 
 // Navigation
 
-// Nav image switch for mobile/tablet
-.social-image-container {
-  display: flex;
-  flex-direction: column-reverse;
-  @include media.for-tablet(width.$tablet) {
-    display: block;
-  }
-}
-
 .header__nav {
   display: none;
   margin-block-start: var(--mg-300);
   @include media.for-tablet(width.$tablet) {
     display: block;
+    position: absolute;
+    margin-inline-end: var(--mg-600);
+    right: 0;
+    z-index: 1;
   }
 }
 
@@ -76,11 +71,17 @@
   margin-inline: var(--mg-200);
   @include media.for-tablet(width.$tablet) {
     margin-inline-end: var(--mg-600);
+    color: var(--cl-neutral-black);
+    // filter: drop-shadow(3px 3px 3px var(--cl-neutral-black));
   }
 }
 
-.header__nav__btn {
-  display: block;
+.nav__btn {
+  background-color: var(--cl-neutral-black);
+}
+
+.header__btn__text {
+  color: var(--cl-neutral-white);
 }
 
 // Social icons hover/focus state
