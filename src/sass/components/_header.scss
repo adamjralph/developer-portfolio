@@ -2,18 +2,11 @@
 @use "../abstracts/variables" as width;
 
 // Header navigation
-@include media.for-mobile(width.$mobile) {
-  .container {
-    width: 100%;
-  }
-}
 
 .header {
   display: grid;
   align-items: center;
   margin-inline: auto;
-  padding-inline: 1.5rem;
-  margin-block-start: var(--mg-500);
 
   @include media.for-tablet(width.$tablet) {
     display: grid;
@@ -51,6 +44,13 @@
   max-width: 100%;
   margin-inline: auto;
   margin-block: var(--mg-500);
+  @include media.for-tablet(width.$tablet) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40%;
+    margin-block: 0;
+  }
 }
 
 // Navigation

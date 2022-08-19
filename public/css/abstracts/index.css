@@ -23,6 +23,33 @@ a {
   color: var(--cl-neutral-black);
 }
 
+:root {
+  --fs-xl: 5rem;
+  --fs-600: 1.5rem;
+  --fs-500: 1.25rem;
+  --fs-400: 1rem;
+  --fs-300: 0.5rem;
+  --fs-200: 0.25rem;
+  --pd-xl: 5rem;
+  --pd-900: 4rem;
+  --pd-800: 3rem;
+  --pd-700: 2rem;
+  --pd-600: 1.5rem;
+  --pd-500: 1.25rem;
+  --pd-400: 1rem;
+  --pd-300: 0.5rem;
+  --pd-200: 0.25rem;
+  --mg-xl: 5rem;
+  --mg-900: 4rem;
+  --mg-800: 3rem;
+  --mg-700: 2rem;
+  --mg-600: 1.5rem;
+  --mg-500: 1.25rem;
+  --mg-400: 1rem;
+  --mg-300: 0.5rem;
+  --mg-200: 0.25rem;
+}
+
 *,
 *::before,
 *::after {
@@ -55,9 +82,14 @@ blockquote::after {
 }
 
 .container {
-  width: 90%;
-  max-width: 1220px;
-  margin-inline: auto;
+  width: 100%;
+}
+@media (min-width: 640px) {
+  .container {
+    width: 80%;
+    max-width: 1220px;
+    margin-inline: auto;
+  }
 }
 
 @media (min-width: 40rem) {
@@ -75,31 +107,4 @@ blockquote::after {
   --cl-twitter: #1d9bf0;
   --cl-youtube: #ff0000;
   --cl-github: #727272;
-}
-
-:root {
-  --fs-xl: 5rem;
-  --fs-600: 1.5rem;
-  --fs-500: 1.25rem;
-  --fs-400: 1rem;
-  --fs-300: 0.5rem;
-  --fs-200: 0.25rem;
-  --pd-xl: 5rem;
-  --pd-900: 4rem;
-  --pd-800: 3rem;
-  --pd-700: 2rem;
-  --pd-600: 1.5rem;
-  --pd-500: 1.25rem;
-  --pd-400: 1rem;
-  --pd-300: 0.5rem;
-  --pd-200: 0.25rem;
-  --mg-xl: 5rem;
-  --mg-900: 4rem;
-  --mg-800: 3rem;
-  --mg-700: 2rem;
-  --mg-600: 1.5rem;
-  --mg-500: 1.25rem;
-  --mg-400: 1rem;
-  --mg-300: 0.5rem;
-  --mg-200: 0.25rem;
 }

@@ -1,3 +1,5 @@
+@use "../abstracts/mixins" as media;
+@use "../abstracts/variables" as width;
 // Page Reset
 *,
 *::before,
@@ -32,9 +34,12 @@ blockquote::after {
 
 // Page container
 .container {
-  width: 90%;
-  max-width: 1220px;
-  margin-inline: auto;
+  width: 100%;
+  @include media.for-tablet(width.$tablet) {
+    width: 80%;
+    max-width: 1220px;
+    margin-inline: auto;
+  }
 }
 
 @media (min-width: 40rem) {
