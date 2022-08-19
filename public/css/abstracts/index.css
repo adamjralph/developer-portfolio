@@ -55,7 +55,7 @@ blockquote::after {
 }
 
 .container {
-  width: 80%;
+  width: 90%;
   max-width: 1220px;
   margin-inline: auto;
 }

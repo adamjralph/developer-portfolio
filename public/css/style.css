@@ -55,7 +55,7 @@ blockquote::after {
 }
 
 .container {
-  width: 80%;
+  width: 90%;
   max-width: 1220px;
   margin-inline: auto;
 }
@@ -104,6 +104,11 @@ blockquote::after {
   --mg-200: 0.25rem;
 }
 
+@media (max-width: 360px) {
+  .container {
+    width: 100%;
+  }
+}
 .header {
   display: grid;
   align-items: center;
@@ -121,6 +126,9 @@ blockquote::after {
   }
 }
 
+.header__logo {
+  margin-inline-start: auto;
+}
 @media (min-width: 640px) {
   .header__logo {
     flex-grow: 0;
@@ -132,7 +140,7 @@ blockquote::after {
 }
 
 .header__social {
-  margin-block-start: var(--mg-300);
+  margin-inline: auto;
 }
 @media (min-width: 640px) {
   .header__social {
@@ -146,9 +154,9 @@ blockquote::after {
 }
 
 .header__image {
-  display: block;
-  max-width: 95%;
+  max-width: 100%;
   margin-inline: auto;
+  margin-block: var(--mg-500);
 }
 
 .social-image-container {

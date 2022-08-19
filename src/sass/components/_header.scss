@@ -2,6 +2,12 @@
 @use "../abstracts/variables" as width;
 
 // Header navigation
+@include media.for-mobile(width.$mobile) {
+  .container {
+    width: 100%;
+  }
+}
+
 .header {
   display: grid;
   align-items: center;
@@ -19,6 +25,7 @@
 }
 
 .header__logo {
+  margin-inline-start: auto;
   @include media.for-tablet(width.$tablet) {
     flex-grow: 0;
   }
@@ -29,7 +36,7 @@
 }
 
 .header__social {
-  margin-block-start: var(--mg-300);
+  margin-inline: auto;
   @include media.for-tablet(width.$tablet) {
     flex-grow: 2;
     margin-inline-start: var(--mg-800);
@@ -41,9 +48,9 @@
 }
 
 .header__image {
-  display: block;
-  max-width: 95%;
+  max-width: 100%;
   margin-inline: auto;
+  margin-block: var(--mg-500);
 }
 
 // Navigation
@@ -105,27 +112,3 @@
     background-color: #000;
   }
 }
-
-// Media mobile
-// @media (min-width: 600px) {
-//   .header {
-//     display: flex;
-//     flex-direction: row;
-//     margin-inline: auto;
-//     justify-content: space-between;
-//     align-items: center;
-//   }
-
-//   .header__logo {
-//     flex-grow: 0;
-//   }
-
-//   .header__social {
-//     flex-grow: 2;
-//     margin-inline-start: 3rem;
-//   }
-
-//   .header__nav__link {
-//     margin-inline-end: var(--mg-600);
-//   }
-// }

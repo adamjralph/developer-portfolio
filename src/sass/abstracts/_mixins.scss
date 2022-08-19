@@ -1,4 +1,9 @@
 // Media queries
+@mixin for-mobile($breakpoint) {
+  @media (max-width: $breakpoint) {
+    @content;
+  }
+}
 @mixin for-tablet($breakpoint) {
   @media (min-width: $breakpoint) {
     @content;
