@@ -19,6 +19,8 @@
 
 .header__logo {
   margin-inline-start: auto;
+  margin-block-start: var(--mg-400);
+  padding-inline-end: var(--mg-400);
   @include media.for-tablet(width.$tablet) {
     flex-grow: 0;
   }
@@ -41,47 +43,22 @@
 }
 
 .header__image {
-  max-width: 100%;
+  background-image: url(../../assets/img/paradise1.jpg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 300px;
   margin-inline: auto;
   margin-block: var(--mg-500);
   @include media.for-tablet(width.$tablet) {
     position: absolute;
+    width: 100%;
+    max-width: 50%;
+    height: 600px;
     top: 0;
     right: 0;
-    width: 40%;
     margin-block: 0;
   }
-}
-
-// Navigation
-
-.header__nav {
-  display: none;
-  margin-block-start: var(--mg-300);
-  @include media.for-tablet(width.$tablet) {
-    display: block;
-    position: absolute;
-    margin-inline-end: var(--mg-600);
-    right: 0;
-    z-index: 1;
-  }
-}
-
-.header__nav__link {
-  margin-inline: var(--mg-200);
-  @include media.for-tablet(width.$tablet) {
-    margin-inline-end: var(--mg-600);
-    color: var(--cl-neutral-black);
-    // filter: drop-shadow(3px 3px 3px var(--cl-neutral-black));
-  }
-}
-
-.nav__btn {
-  background-color: var(--cl-neutral-black);
-}
-
-.header__btn__text {
-  color: var(--cl-neutral-white);
 }
 
 // Social icons hover/focus state

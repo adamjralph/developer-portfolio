@@ -1,0 +1,36 @@
+@use "../abstracts/mixins" as media;
+@use "../abstracts/variables" as width;
+// Navigation
+
+.header__nav {
+  visibility: hidden;
+  height: 0;
+  position: absolute;
+
+  display: flex;
+  margin-block-start: var(--mg-300);
+  @include media.for-tablet(width.$tablet) {
+    display: block;
+    position: absolute;
+    margin-inline-end: var(--mg-600);
+    right: 0;
+    z-index: 1;
+  }
+}
+
+.header__nav__link {
+  margin-inline: var(--mg-200);
+  @include media.for-tablet(width.$tablet) {
+    margin-inline-end: var(--mg-600);
+    color: var(--cl-neutral-black);
+    // filter: drop-shadow(3px 3px 3px var(--cl-neutral-black));
+  }
+}
+
+.nav__btn {
+  background-color: var(--cl-neutral-black);
+}
+
+.header__btn__text {
+  color: var(--cl-neutral-white);
+}
