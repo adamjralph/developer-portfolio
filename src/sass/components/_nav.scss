@@ -2,13 +2,11 @@
 @use "../abstracts/variables" as width;
 // Navigation
 
-.header__nav {
-  visibility: hidden;
-  height: 0;
-  position: absolute;
+.nav {
+  width: 100%;
 
-  display: flex;
-  margin-block-start: var(--mg-300);
+  // display: flex;
+  // margin-block-start: var(--mg-300);
   @include media.for-tablet(width.$tablet) {
     display: block;
     position: absolute;
@@ -18,7 +16,76 @@
   }
 }
 
-.header__nav__link {
+// Nav toggle
+.nav-toggle {
+  cursor: pointer;
+  border: 0;
+  width: 2rem;
+  height: 2.5rem;
+  padding: 0em;
+  margin-block-start: var(--mg-500);
+  margin-inline-start: var(--mg-400);
+
+  border-radius: 50%;
+  background: var(--cl-neutral-white);
+  // color: var(--cl-neutral-white);
+  // transition: opacity 250ms ease;
+
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+  display: block;
+  margin: 0 auto;
+  height: 2px;
+  background: var(--cl-neutral-black);
+}
+
+.hamburger::before,
+.hamburger::after {
+  content: "";
+  width: 100%;
+}
+
+.hamburger::before {
+  transform: translateY(-6px);
+  &:hover {
+    transform: rotate(180deg);
+  }
+}
+
+.hamburger::after {
+  transform: translateY(3px);
+}
+
+.nav {
+  visibility: hidden;
+  height: 0;
+  position: absolute;
+}
+
+.nav--visible {
+  visibility: visible;
+  height: auto;
+  position: relative;
+}
+
+@include media.for-tablet(width.$tablet) {
+  .nav-toggle {
+    display: none;
+  }
+
+  .nav {
+    visibility: visible;
+    display: flex;
+  }
+}
+
+.nav__link {
   margin-inline: var(--mg-200);
   @include media.for-tablet(width.$tablet) {
     margin-inline-end: var(--mg-600);
@@ -31,6 +98,6 @@
   background-color: var(--cl-neutral-black);
 }
 
-.header__btn__text {
+.nav__btn-text {
   color: var(--cl-neutral-white);
 }
