@@ -206,7 +206,7 @@
 }
 .nav__link {
   margin-block-start: var(--mg-500);
-  transition: color 0.5s ease;
+  transition: color 0.3s ease-in-out;
 }
 .nav__link:hover, .nav__link:focus {
   color: var(--cl-primary-blue);
