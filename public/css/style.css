@@ -267,11 +267,17 @@ button {
   height: 0;
   position: absolute;
 }
-
 .nav--visible {
   visibility: visible;
-  height: auto;
-  position: relative;
+  z-index: 1;
+  min-height: 330px;
+  margin-block-start: var(--mg-600);
+  padding-block: var(--pd-700);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--cl-neutral-white);
 }
 
 @media (min-width: 640px) {
@@ -284,7 +290,11 @@ button {
   }
 }
 .nav__link {
-  margin-inline: var(--mg-200);
+  margin-block: var(--mg-300);
+  transition: all 0.5s ease;
+}
+.nav__link:hover, .nav__link:focus {
+  color: var(--cl-primary-blue);
 }
 @media (min-width: 640px) {
   .nav__link {
@@ -295,8 +305,12 @@ button {
 
 .nav__btn {
   background-color: var(--cl-neutral-black);
-}
-
-.nav__btn-text {
   color: var(--cl-neutral-white);
+  border: 2px solid var(--cl-neutral-black);
+  transition: all 0.5s ease;
+}
+.nav__btn:hover, .nav__btn:focus {
+  background-color: var(--cl-primary-white);
+  border: 2px solid var(--cl-neutral-black);
+  color: var(--cl-neutral-black);
 }
