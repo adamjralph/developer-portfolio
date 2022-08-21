@@ -5,22 +5,20 @@
 // Hamburger / logo container
 .hamburger-logo {
   display: flex;
+  padding-inline: var(--pd-500);
   transition: all 0.3s ease;
-}
 
-.nav {
-  width: 100%;
-
-  // display: flex;
-  // margin-block-start: var(--mg-300);
   @include media.for-tablet(width.$tablet) {
-    display: block;
-    // position: absolute;
-    margin-inline-end: var(--mg-600);
-    right: 0;
-    z-index: 1;
+    display: none;
   }
 }
+
+// .nav {
+//   width: 100%;
+
+//   // display: flex;
+//   // margin-block-start: var(--mg-300);
+// }
 
 // Nav toggle
 .nav-toggle {
@@ -47,7 +45,7 @@
 .hamburger::after {
   display: block;
   margin: 0 auto;
-  height: 2px;
+  height: 2.5px;
   background: var(--cl-neutral-black);
   z-index: 1;
 }
@@ -59,22 +57,49 @@
 }
 
 .hamburger::before {
-  transform: translateY(-6px);
-  &:hover {
-    transform: rotate(90deg);
-  }
+  transform: translateY(-7px);
 }
 
+// .nav-toggle:hover,
+// .nav-toggle:focus {
+
+//   .hamburger::before {
+//     transform: rotate(45deg);
+//   }
+
+//   .hamburger::after {
+//     transform: rotate(-45deg);
+//   }
+// }
+
+// .nav-toggle .hamburger:hover,
+// .nav-toggle .hamburger:focus {
+//   display: none;
+// }
+
 .hamburger::after {
-  transform: translateY(3px);
+  transform: translateY(5px);
 }
 
 .nav {
   visibility: hidden;
   height: 0;
   position: absolute;
+  transform: translateX(400px);
+  transition: transform 0.5s ease-in;
+  @include media.for-tablet(width.$tablet) {
+    display: inline-block;
+    position: relative;
+    visibility: visible;
+    grid-column-start: 3;
+    margin-inline-end: 0;
+    z-index: 1;
+    margin-block: 0;
+  }
+
   &--visible {
     left: 0;
+    width: 100%;
     visibility: visible;
     min-height: 340px;
     margin-block-start: var(--mg-800);
@@ -84,6 +109,8 @@
     align-items: center;
     justify-content: center;
     background: var(--cl-neutral-white);
+    transform: translateX(0);
+    transition: transform 0.5s ease;
   }
 }
 
@@ -111,11 +138,13 @@
   @include media.for-tablet(width.$tablet) {
     margin-inline-end: var(--mg-600);
     color: var(--cl-neutral-black);
+    margin-block-start: var(--mg-300);
     // filter: drop-shadow(3px 3px 3px var(--cl-neutral-black));
   }
 }
 
 .nav__btn {
+  width: 100%;
   background-color: var(--cl-neutral-black);
   color: var(--cl-neutral-white);
   border: 2px solid var(--cl-neutral-black);
@@ -127,11 +156,20 @@
     color: var(--cl-neutral-black);
   }
 
+  @include media.for-tablet(width.$tablet) {
+    &:hover,
+    &:focus {
+      background-color: var(--cl-neutral-white);
+      border: 2px solid var(--cl-neutral-black);
+      color: var(--cl-neutral-black);
+    }
+  }
+
   transition: background-color, border, color 0.5s ease;
 }
 
 .nav-transition {
-  padding-block-start: 1rem;
-  padding-inline: 1rem;
+  padding-block-start: var(--pd-500);
+  padding-inline: var(--pd-700);
   transition: padding 0.5s ease;
 }

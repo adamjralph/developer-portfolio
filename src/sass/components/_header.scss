@@ -18,11 +18,20 @@
 }
 
 .header__logo {
-  margin-inline-start: auto;
-  margin-block-start: var(--mg-400);
-  padding-inline-end: var(--mg-400);
+  display: none;
   @include media.for-tablet(width.$tablet) {
-    flex-grow: 0;
+    margin-block-start: var(--mg-500);
+    margin-inline-start: 0;
+    margin-inline-start: auto;
+    margin-block-start: var(--mg-400);
+    padding-inline-end: var(--mg-400);
+  }
+
+  &--mobile {
+    margin-inline-start: auto;
+    margin-block-start: var(--mg-400);
+    @include media.for-tablet(width.$tablet) {
+    }
   }
 }
 
@@ -33,7 +42,7 @@
 .header__social {
   margin-inline: auto;
   @include media.for-tablet(width.$tablet) {
-    flex-grow: 2;
+    grid-column-start: 2;
     margin-inline-start: var(--mg-800);
   }
 }

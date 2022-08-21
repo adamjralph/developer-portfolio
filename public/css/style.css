@@ -130,16 +130,21 @@ button {
 }
 
 .header__logo {
-  margin-inline-start: auto;
-  margin-block-start: var(--mg-400);
-  padding-inline-end: var(--mg-400);
+  display: none;
 }
 @media (min-width: 640px) {
   .header__logo {
-    flex-grow: 0;
+    margin-block-start: var(--mg-500);
+    margin-inline-start: 0;
+    margin-inline-start: auto;
+    margin-block-start: var(--mg-400);
+    padding-inline-end: var(--mg-400);
   }
 }
-
+.header__logo--mobile {
+  margin-inline-start: auto;
+  margin-block-start: var(--mg-400);
+}
 .header__logo__heading {
   font-weight: 400;
 }
@@ -149,7 +154,7 @@ button {
 }
 @media (min-width: 640px) {
   .header__social {
-    flex-grow: 2;
+    grid-column-start: 2;
     margin-inline-start: var(--mg-800);
   }
 }
@@ -210,18 +215,12 @@ button {
 
 .hamburger-logo {
   display: flex;
+  padding-inline: var(--pd-500);
   transition: all 0.3s ease;
 }
-
-.nav {
-  width: 100%;
-}
 @media (min-width: 640px) {
-  .nav {
-    display: block;
-    margin-inline-end: var(--mg-600);
-    right: 0;
-    z-index: 1;
+  .hamburger-logo {
+    display: none;
   }
 }
 
@@ -244,7 +243,7 @@ button {
 .hamburger::after {
   display: block;
   margin: 0 auto;
-  height: 2px;
+  height: 2.5px;
   background: var(--cl-neutral-black);
   z-index: 1;
 }
@@ -256,23 +255,34 @@ button {
 }
 
 .hamburger::before {
-  transform: translateY(-6px);
-}
-.hamburger::before:hover {
-  transform: rotate(90deg);
+  transform: translateY(-7px);
 }
 
 .hamburger::after {
-  transform: translateY(3px);
+  transform: translateY(5px);
 }
 
 .nav {
   visibility: hidden;
   height: 0;
   position: absolute;
+  transform: translateX(400px);
+  transition: transform 0.5s ease-in;
+}
+@media (min-width: 640px) {
+  .nav {
+    display: inline-block;
+    position: relative;
+    visibility: visible;
+    grid-column-start: 3;
+    margin-inline-end: 0;
+    z-index: 1;
+    margin-block: 0;
+  }
 }
 .nav--visible {
   left: 0;
+  width: 100%;
   visibility: visible;
   min-height: 340px;
   margin-block-start: var(--mg-800);
@@ -282,6 +292,8 @@ button {
   align-items: center;
   justify-content: center;
   background: var(--cl-neutral-white);
+  transform: translateX(0);
+  transition: transform 0.5s ease;
 }
 
 @media (min-width: 640px) {
@@ -304,10 +316,12 @@ button {
   .nav__link {
     margin-inline-end: var(--mg-600);
     color: var(--cl-neutral-black);
+    margin-block-start: var(--mg-300);
   }
 }
 
 .nav__btn {
+  width: 100%;
   background-color: var(--cl-neutral-black);
   color: var(--cl-neutral-white);
   border: 2px solid var(--cl-neutral-black);
@@ -318,9 +332,16 @@ button {
   border: 2px solid var(--cl-neutral-black);
   color: var(--cl-neutral-black);
 }
+@media (min-width: 640px) {
+  .nav__btn:hover, .nav__btn:focus {
+    background-color: var(--cl-neutral-white);
+    border: 2px solid var(--cl-neutral-black);
+    color: var(--cl-neutral-black);
+  }
+}
 
 .nav-transition {
-  padding-block-start: 1rem;
-  padding-inline: 1rem;
+  padding-block-start: var(--pd-500);
+  padding-inline: var(--pd-700);
   transition: padding 0.5s ease;
 }
