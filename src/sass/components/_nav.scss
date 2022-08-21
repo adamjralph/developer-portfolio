@@ -2,6 +2,12 @@
 @use "../abstracts/variables" as width;
 // Navigation
 
+// Hamburger / logo container
+.hamburger-logo {
+  display: flex;
+  transition: all 0.3s ease;
+}
+
 .nav {
   width: 100%;
 
@@ -9,7 +15,7 @@
   // margin-block-start: var(--mg-300);
   @include media.for-tablet(width.$tablet) {
     display: block;
-    position: absolute;
+    // position: absolute;
     margin-inline-end: var(--mg-600);
     right: 0;
     z-index: 1;
@@ -31,7 +37,7 @@
   // color: var(--cl-neutral-white);
   // transition: opacity 250ms ease;
 
-  position: absolute;
+  // position: absolute;
   left: 0;
   top: 0;
 }
@@ -43,6 +49,7 @@
   margin: 0 auto;
   height: 2px;
   background: var(--cl-neutral-black);
+  z-index: 1;
 }
 
 .hamburger::before,
@@ -54,7 +61,7 @@
 .hamburger::before {
   transform: translateY(-6px);
   &:hover {
-    transform: rotate(180deg);
+    transform: rotate(90deg);
   }
 }
 
@@ -67,14 +74,11 @@
   height: 0;
   position: absolute;
   &--visible {
+    left: 0;
     visibility: visible;
-    // position: relative;
-    z-index: 1;
-    // height: auto;
-    min-height: 330px;
-    margin-block-start: var(--mg-600);
+    min-height: 340px;
+    margin-block-start: var(--mg-800);
     padding-block: var(--pd-700);
-    // margin-block-start: var(--mg-800);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -96,13 +100,13 @@
 
 .nav__link {
   // margin-inline: auto;
-  margin-block: var(--mg-300);
+  margin-block-start: var(--mg-500);
   &:hover,
   &:focus {
     color: var(--cl-primary-blue);
   }
 
-  transition: all 0.5s ease;
+  transition: color 0.5s ease;
 
   @include media.for-tablet(width.$tablet) {
     margin-inline-end: var(--mg-600);
@@ -123,5 +127,11 @@
     color: var(--cl-neutral-black);
   }
 
-  transition: all 0.5s ease;
+  transition: background-color, border, color 0.5s ease;
+}
+
+.nav-transition {
+  padding-block-start: 1rem;
+  padding-inline: 1rem;
+  transition: padding 0.5s ease;
 }
