@@ -129,11 +129,18 @@ button {
   }
 }
 
+.header__logo--mobile {
+  display: block;
+  margin-inline-start: auto;
+  margin-block-start: var(--mg-400);
+}
+
 .header__logo {
   display: none;
 }
 @media (min-width: 640px) {
   .header__logo {
+    display: block;
     margin-block-start: var(--mg-500);
     margin-inline-start: 0;
     margin-inline-start: auto;
@@ -141,10 +148,7 @@ button {
     padding-inline-end: var(--mg-400);
   }
 }
-.header__logo--mobile {
-  margin-inline-start: auto;
-  margin-block-start: var(--mg-400);
-}
+
 .header__logo__heading {
   font-weight: 400;
 }

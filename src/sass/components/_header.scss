@@ -17,21 +17,22 @@
   }
 }
 
+// Mobile logo
+.header__logo--mobile {
+  display: block;
+  margin-inline-start: auto;
+  margin-block-start: var(--mg-400);
+}
+
 .header__logo {
   display: none;
   @include media.for-tablet(width.$tablet) {
+    display: block;
     margin-block-start: var(--mg-500);
     margin-inline-start: 0;
     margin-inline-start: auto;
     margin-block-start: var(--mg-400);
     padding-inline-end: var(--mg-400);
-  }
-
-  &--mobile {
-    margin-inline-start: auto;
-    margin-block-start: var(--mg-400);
-    @include media.for-tablet(width.$tablet) {
-    }
   }
 }
 
