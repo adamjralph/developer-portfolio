@@ -167,6 +167,7 @@ button {
   background-image: url(../../assets/img/paradise1.jpg);
   background-size: 100%;
   background-repeat: no-repeat;
+  background-size: cover/cover;
   width: 100%;
   height: 300px;
   margin-inline: auto;
