@@ -60,13 +60,16 @@
   transform: translateX(400px);
   transition: transform 0.5s ease-in;
   @include media.for-tablet(width.$tablet) {
-    display: inline-block;
-    position: relative;
     visibility: visible;
+    height: auto;
+    position: relative;
+    transform: translateX(0);
+    transition: none;
     grid-column-start: 3;
-    margin-inline-end: 0;
+    margin-block-start: 1rem;
     z-index: 1;
-    margin-block: 0;
+    // margin-block: 0;
+    // margin-inline-start: var(--mg-500);
   }
 
   &--visible {
@@ -139,8 +142,8 @@
   transition: background-color, border, color 0.5s ease;
 }
 
-.nav-transition {
-  padding-block-start: var(--pd-500);
-  padding-inline: var(--pd-700);
-  transition: padding 0.5s ease;
-}
+// .nav-transition {
+//   padding-block-start: var(--pd-500);
+//   padding-inline: var(--pd-700);
+//   transition: padding 0.5s ease;
+// }
