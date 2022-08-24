@@ -66,10 +66,7 @@
     transform: translateX(0);
     transition: none;
     grid-column-start: 3;
-    margin-block-start: 1rem;
     z-index: 1;
-    // margin-block: 0;
-    // margin-inline-start: var(--mg-500);
   }
 
   &--visible {
@@ -101,7 +98,7 @@
 }
 
 .nav__link {
-  // margin-inline: auto;
+  margin-inline: auto;
   margin-block-start: var(--mg-500);
   &:hover,
   &:focus {
@@ -112,12 +109,13 @@
 
   @include media.for-tablet(width.$tablet) {
     margin-inline-end: var(--mg-600);
+    margin-block-start: var(--mg-500);
     color: var(--cl-neutral-black);
-    margin-block-start: var(--mg-300);
   }
 }
 
 .nav__btn {
+  cursor: pointer;
   width: 100%;
   background-color: var(--cl-neutral-black);
   color: var(--cl-neutral-white);
@@ -131,6 +129,9 @@
   }
 
   @include media.for-tablet(width.$tablet) {
+    width: 7rem;
+    margin-block: var(--mg-800);
+    margin-block: 0;
     &:hover,
     &:focus {
       background-color: var(--cl-neutral-white);

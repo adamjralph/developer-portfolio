@@ -9,9 +9,12 @@
   margin-inline: auto;
 
   @include media.for-tablet(width.$tablet) {
-    display: grid;
-    grid-template-columns: 1fr 1fr 2fr;
-    margin-inline: auto;
+    // display: grid;
+    // grid-template-columns: 15% 35% 1fr;
+    // margin-inline: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding-block-start: var(--pd-400);
   }
 }
@@ -27,7 +30,7 @@
   display: none;
   @include media.for-tablet(width.$tablet) {
     display: inline;
-    // margin-block-start: var(--mg-500);
+    margin-block-start: var(--mg-300);
     // margin-inline-start: 0;
     // padding-inline-end: var(--mg-400);
   }
@@ -40,14 +43,13 @@
 .header__social {
   margin-inline: auto;
   @include media.for-tablet(width.$tablet) {
-    grid-column-start: 2;
-    margin-inline-start: 0;
-    margin-block-end: 0;
+    margin-inline-start: var(--mg-800);
+    margin-block-start: var(--mg-400);
   }
 }
 
 .social__link {
-  padding-inline: var(--pd-200);
+  // padding-inline: var(--pd-200);
 }
 
 .header__image {
