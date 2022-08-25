@@ -124,7 +124,7 @@ button {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-block-start: var(--pd-400);
+    padding-block-start: 0.25rem;
   }
 }
 
@@ -140,7 +140,7 @@ button {
 @media (min-width: 640px) {
   .header__logo {
     display: inline;
-    margin-block-start: var(--mg-300);
+    margin-block-start: 0.5rem;
   }
 }
 
@@ -154,8 +154,12 @@ button {
 @media (min-width: 640px) {
   .header__social {
     margin-inline-start: var(--mg-800);
-    margin-block-start: var(--mg-400);
+    margin-block-start: 0.9rem;
   }
+}
+
+.social__link {
+  padding-inline: var(--pd-300);
 }
 
 .header__image {
@@ -263,7 +267,7 @@ button {
   height: 0;
   position: absolute;
   transform: translateX(400px);
-  transition: transform 0.5s ease-in;
+  transition: transform 0.5s ease;
 }
 @media (min-width: 640px) {
   .nav {
@@ -277,9 +281,9 @@ button {
   }
 }
 .nav--visible {
+  visibility: visible;
   left: 0;
   width: 100%;
-  visibility: visible;
   min-height: 340px;
   margin-block-start: var(--mg-800);
   padding-block: var(--pd-700);
@@ -312,7 +316,7 @@ button {
 @media (min-width: 640px) {
   .nav__link {
     margin-inline-end: var(--mg-600);
-    margin-block-start: var(--mg-500);
+    margin-block-start: 1.5rem;
     color: var(--cl-neutral-black);
   }
 }
@@ -323,7 +327,7 @@ button {
   background-color: var(--cl-neutral-black);
   color: var(--cl-neutral-white);
   border: 2px solid var(--cl-neutral-black);
-  transition: background-color, border, color 0.5s ease;
+  transition: background-color, border, color, background-color 0.5s ease-in-out;
 }
 .nav__btn:hover, .nav__btn:focus {
   background-color: var(--cl-primary-white);
@@ -333,8 +337,7 @@ button {
 @media (min-width: 640px) {
   .nav__btn {
     width: 7rem;
-    margin-block: var(--mg-800);
-    margin-block: 0;
+    margin-block-start: 1rem;
   }
   .nav__btn:hover, .nav__btn:focus {
     background-color: var(--cl-neutral-white);

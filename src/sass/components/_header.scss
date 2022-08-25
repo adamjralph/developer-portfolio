@@ -15,7 +15,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-block-start: var(--pd-400);
+    padding-block-start: 0.25rem;
   }
 }
 
@@ -30,7 +30,7 @@
   display: none;
   @include media.for-tablet(width.$tablet) {
     display: inline;
-    margin-block-start: var(--mg-300);
+    margin-block-start: 0.5rem;
     // margin-inline-start: 0;
     // padding-inline-end: var(--mg-400);
   }
@@ -44,12 +44,12 @@
   margin-inline: auto;
   @include media.for-tablet(width.$tablet) {
     margin-inline-start: var(--mg-800);
-    margin-block-start: var(--mg-400);
+    margin-block-start: 0.9rem;
   }
 }
 
 .social__link {
-  // padding-inline: var(--pd-200);
+  padding-inline: var(--pd-300);
 }
 
 .header__image {
