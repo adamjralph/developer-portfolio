@@ -1,1 +1,23 @@
+@use "../abstracts/mixins" as media;
+@use "../abstracts/variables" as width;
+
 // Hero
+.hero {
+  display: flex;
+  align-items: center;
+  // justify-content: center;
+  height: 50vh;
+}
+.hero__heading {
+  font-size: 2.5rem;
+  font-weight: 300;
+  max-width: 50%;
+  padding-inline-end: var(--pd-500);
+
+  @include media.for-tablet(width.$tablet) {
+    font-size: 2.5rem;
+    font-weight: 300;
+    max-width: 50%;
+    padding-inline-end: var(--pd-500);
+  }
+}

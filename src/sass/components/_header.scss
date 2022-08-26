@@ -40,18 +40,6 @@
   font-weight: 400;
 }
 
-.header__social {
-  margin-inline: auto;
-  @include media.for-tablet(width.$tablet) {
-    margin-inline-start: var(--mg-800);
-    margin-block-start: 0.9rem;
-  }
-}
-
-.social__link {
-  padding-inline: var(--pd-300);
-}
-
 .header__image {
   background-image: url(../../assets/img/paradise1.jpg);
   background-size: 100%;
@@ -72,7 +60,27 @@
   }
 }
 
+// Social icons
+
+.header__social {
+  // display: flex;
+  // align-items: space-between;
+  // justify-content: space-between;
+  margin-inline: auto;
+  @include media.for-tablet(width.$tablet) {
+    margin-inline-start: var(--mg-800);
+    margin-block-start: 0.9rem;
+  }
+}
+
+.social__link {
+  padding-inline: var(--pd-300);
+}
+
 // Social icons hover/focus state
+.header__social {
+  display: flex;
+}
 
 .header__social__icon {
   color: #000;
@@ -82,7 +90,10 @@
   &--youtube,
   &--github {
     transition: all 0.3s ease-in-out;
+    margin-inline: 0;
+    padding-inline: 0;
   }
+
   &--twitter:hover,
   &--twitter:focus {
     color: var(--cl-twitter);

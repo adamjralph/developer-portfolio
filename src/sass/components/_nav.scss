@@ -86,6 +86,12 @@
   }
 }
 
+.nav-transition {
+  padding-block-start: var(--pd-500);
+  padding-inline: var(--pd-700);
+  transition: padding 0.5s ease;
+}
+
 @include media.for-tablet(width.$tablet) {
   .nav-toggle {
     display: none;
@@ -100,6 +106,8 @@
 .nav__link {
   margin-inline: auto;
   margin-block-start: var(--mg-500);
+  font-weight: 600;
+  letter-spacing: 1px;
   &:hover,
   &:focus {
     color: var(--cl-primary-blue);
@@ -141,9 +149,3 @@
 
   transition: background-color, border, color, background-color 0.5s ease-in-out;
 }
-
-// .nav-transition {
-//   padding-block-start: var(--pd-500);
-//   padding-inline: var(--pd-700);
-//   transition: padding 0.5s ease;
-// }
