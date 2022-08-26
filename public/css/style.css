@@ -222,13 +222,14 @@ button {
   font-size: 2.5rem;
   font-weight: 300;
   max-width: 50%;
-  padding-inline-end: var(--pd-500);
+  padding-inline-start: var(--pd-700);
 }
 @media (min-width: 640px) {
   .hero__heading {
     font-size: 2.5rem;
     font-weight: 300;
     max-width: 50%;
+    padding-inline-start: 0;
     padding-inline-end: var(--pd-500);
   }
 }
