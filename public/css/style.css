@@ -215,7 +215,11 @@ button {
 .hero {
   display: flex;
   align-items: center;
-  height: 50vh;
+}
+@media (min-width: 640px) {
+  .hero {
+    height: 50vh;
+  }
 }
 
 .hero__heading {
@@ -223,6 +227,7 @@ button {
   font-weight: 300;
   max-width: 50%;
   padding-inline-start: var(--pd-700);
+  padding-block-start: var(--pd-500);
 }
 @media (min-width: 640px) {
   .hero__heading {
@@ -232,6 +237,17 @@ button {
     padding-inline-start: 0;
     padding-inline-end: var(--pd-500);
     margin-inline-end: var(--mg-500);
+  }
+}
+
+@media (min-width: 640px) {
+  .hero__heading--2 {
+    background-color: var(--cl-neutral-white);
+    max-width: 100%;
+    padding: 0;
+    padding-block-end: 3rem;
+    margin-block-start: 4rem;
+    margin-inline-end: 0;
   }
 }
 
